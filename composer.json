@@ -1,0 +1,56 @@
+{
+    "name": "mad-web/laravel-robots",
+    "description": "Robots.txt generator service.",
+    "type": "library",
+    "keywords": [
+        "mad-web",
+        "laravel-robots",
+        "robots",
+        "seo"
+    ],
+    "homepage": "https://github.com/mad-web/laravel-robots",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mad-web",
+            "email": "madweb.dev@gmail.com",
+            "homepage": "https://github.com/mad-web",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.3",
+        "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+        "mockery/mockery": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MadWeb\\Robots\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MadWeb\\Robots\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MadWeb\\Robots\\RobotsServiceProvider"
+            ],
+            "aliases": {
+                "Robots": "MadWeb\\Robots\\RobotsFacade"
+            }
+        }
+    }
+}
